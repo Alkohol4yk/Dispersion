@@ -3,26 +3,49 @@
 #include <fstream>
 #include <windows.h>
 #include <string.h>
+#include <stdlib.h>
+#include <time.h>
 using namespace std;
+double n, m;
+char f[100] = "Vvid.txt";
+int a[1000];
+int ifa;
+double D;
+
+void nov_f()
+{
+	system("cls");
+	cout << "Введіть назву нового файлу, або повну його адресу:";
+	cin >> f;
+	ifa = 0;
+}
+
+
+
+
+
+
+
 void main()
 {
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
-  for (;;)
+	for (;;)
 	{
 		int nom;
+		cout << "Зчитування проходить з файлу:" << f << endl;
 		cout << "Введіть номер рядка, який ви бажаєте виконати:\n"
 			<< "1)\tВибрати новий файл\n"
 			<< "2)\tЗчитати інформацію\n"
-			<< "3)\tВорахувати дисперсію\n"
+			<< "3)\tПорахувати дисперсію\n"
 			<< "4)\tВивести результат в файл\n"
 			<< "5)\tЗавершити програму\n";
 		cin >> nom;
-		if (nom == 1)nova_hra();
-		if (nom == 2)perevirka_po_riad();
-		if (nom == 3)perevirka_po_stowp();
-		if (nom == 4)vyvid();
+		if (nom == 1)nov_f();
+		if (nom == 2)Vvid();
+		if (nom == 3)Dysp_m();
+		if (nom == 4)Vyvid();
 		if (nom == 5)exit(0);
-		if (nom > 5 || nom < 1)vyvid();
+		if (nom > 5 || nom < 1)system("cls");
 	}
 }
