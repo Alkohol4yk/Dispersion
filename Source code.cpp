@@ -20,7 +20,23 @@ void nov_f()
 	ifa = 0;
 }
 
-
+void Vvid()
+{
+	system("cls");
+	int k, l;
+	l = 0;
+	ifstream G(f);
+	while(!G.eof())
+	{
+		G >> k;
+		a[l] = k;
+		l++;
+	}
+	n = l;
+	G.close();
+	cout <<"\n"<< n<<endl;
+	ifa = 1;
+}
 
 
 
