@@ -135,8 +135,22 @@ void Dysp_m()
 	}
 }
 
-
-
+void Vyvid()
+{
+	char файл[100];
+	if (ifa != 1)
+	{
+		cout << "Для розблокування цієї функції виконайте пункт 2" << endl;
+	}
+	else
+	{
+		cout << "Введіть назву нового файлу: ";
+		cin >> файл;
+		ofstream G(файл);
+		G << D << endl;
+		G.close();
+	}
+}
 
 void main()
 {
